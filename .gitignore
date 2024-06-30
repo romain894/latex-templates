@@ -1,0 +1,8 @@
+*.log
+*.lua
+*.table
+*.dat
+*.aux
+assets/logo.svg
+assets/logo-eps-converted-to.pdf
+

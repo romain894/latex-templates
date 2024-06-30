@@ -1,0 +1,68 @@
+%% Lenghts used
+% defines
+\newlength{\titleboxheight}
+\newlength{\articletitleboxheight}
+\newlength{\titleboxwidth}
+\newlength{\titleboxtopmargin}
+\newlength{\titletextposition}
+\newlength{\titlelefttextmargin}
+\newlength{\titlerighttextmargin}
+\newlength{\titletextwidth}
+\newlength{\titleabstracttitlemargin}
+\newlength{\titlelogobotmargin}
+\newlength{\titlelogoleftmargin}
+\newlength{\titlelogorightmargin}
+\newlength{\titleleftlogowidth}
+\newlength{\titlerightlogowidth}
+
+\newlength{\chapterpictureheight}
+\newlength{\chapterpicturetextmargin}
+\newlength{\chapterpicturetitlespacing}
+
+% beamer
+\newlength{\beamerfooterheight}
+\newlength{\beamerfooterlogoheight}
+\newlength{\beamerfooterlogowidth}
+\newlength{\beamertitlelogobotmargin}
+\newlength{\beamertitlelogoleftmargin}
+\newlength{\beamertitlelogorightmargin}
+\newlength{\beamertitleleftlogowidth}
+\newlength{\beamertitlerightlogowidth}
+
+%% values
+% title page
+\setlength{\titleboxheight}{17cm} % 21cm
+\setlength{\articletitleboxheight}{10cm}
+\setlength{\titleboxwidth}{19cm}
+\setlength{\titleboxtopmargin}{1.2cm}
+\setlength{\titletextposition}{8.5cm}
+\setlength{\titlelefttextmargin}{2cm}
+\setlength{\titlerighttextmargin}{4cm}
+\setlength{\titleabstracttitlemargin}{0.3cm}
+\setlength{\titlelogobotmargin}{1cm}
+\setlength{\titlelogoleftmargin}{1.2cm}
+\setlength{\titlelogorightmargin}{1.2cm}
+\setlength{\titleleftlogowidth}{7cm}
+\setlength{\titlerightlogowidth}{7cm}
+% chapters
+\setlength{\chapterpictureheight}{8cm}
+\setlength{\chapterpicturetextmargin}{1cm}
+% beamer
+\setlength{\beamerfooterheight}{0.5cm}
+\setlength{\beamerfooterlogoheight}{\beamerfooterheight}
+\setlength{\beamerfooterlogowidth}{2cm}
+\setlength{\beamertitlelogobotmargin}{0.2cm}
+\setlength{\beamertitlelogoleftmargin}{1cm}
+\setlength{\beamertitlelogorightmargin}{1cm}
+\setlength{\beamertitleleftlogowidth}{3.5cm}
+\setlength{\beamertitlerightlogowidth}{3.5cm}
+
+% precomputed values
+\setlength{\titletextwidth}{\titleboxwidth}
+\addtolength{\titletextwidth}{-\titlelefttextmargin}
+\addtolength{\titletextwidth}{-\titlerighttextmargin}
+
+\setlength{\chapterpicturetitlespacing}{-\Gm@tmargin}
+\addtolength{\chapterpicturetitlespacing}{\chapterpictureheight}
+\addtolength{\chapterpicturetitlespacing}{\chapterpicturetextmargin}
+
