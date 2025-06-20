@@ -12,9 +12,11 @@
 \usetikzlibrary{pgfplots.colorbrewer}
 \usetikzlibrary{pgfplots.colormaps}
 
-%% optimize compilation time (not working)
+% Caching for tikz figures:
 %\usetikzlibrary{external}
-%\tikzexternalize % activate!
+%\tikzexternalize[prefix=tikz-figures/] % activate and define figures/ as cache folder
+% Warning: This will only run if your LaTeX is set up to run with shell escape (pdflatex -synctex=1 -interaction=nonstopmode --shell-escape %.tex, see here for example)
+
 
 
 \pgfplotsset{compat=1.18}
@@ -29,6 +31,13 @@
         GnBu\nextlist
     },
 } 
+
+
+\newlength{\chaptertitlexshift}
+\setlength{\chaptertitlexshift}{\dimexpr1in + \oddsidemargin\relax}
+
+\newlength{\chaptertitleyshift}
+\setlength{\chaptertitleyshift}{\dimexpr -\chapterpictureheight * 2 / 3 + 15pt\relax}
 
 \newcommand*\chapterlabel{}
 \titleformat{\chapter}
@@ -73,18 +82,9 @@
             ] {-(1 - y)*2*exp(-(x - 1.5)^2) - (1 - y)*exp(-(x + 1.5)^2) + (1 - y)*0.02*(x)^2 - y*2.5*exp(-0.2*((x + 0.2)^2) + y*0.02*(x + 0.2)^2};
         \end{axis}
 	    % position at the top of the page and add a xshift equal to the margin width
-	    \node[yshift=-\chapterpictureheight, xshift=\the\dimexpr1in+\oddsidemargin\relax] at (current page.north west)
-	      {
-	        \begin{tikzpicture}[remember picture, overlay]
-	  	    % position the title, subtitle and line
-	        \node [anchor=west,xshift=0em, yshift=-0.167*\chapterpictureheight, inner sep=0] at (0,0.5*\chapterpictureheight)
-	        {
-	          \begin{tikzpicture}[remember picture,overlay]
-	          \node [above right, yshift=15pt, text width=\textwidth] (0,0) {\chapterlabel #1};
-	          \end{tikzpicture}
-	        };
-          \end{tikzpicture}
-	      };
+	    \node [text width=\textwidth, anchor=south west]
+        at ([xshift=\chaptertitlexshift, yshift=\chaptertitleyshift] current page.north west)
+        {\chapterlabel #1};
       \end{tikzpicture}
   }
 

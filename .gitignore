@@ -5,4 +5,5 @@
 *.aux
 assets/logo.svg
 assets/logo-eps-converted-to.pdf
-
+tikz-figures/
+report-example.auxlock
