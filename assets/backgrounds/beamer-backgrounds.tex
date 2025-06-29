@@ -1,0 +1,37 @@
+\documentclass[aspectratio=169]{beamer}
+
+\usepackage{xcolor}
+
+%\usepackage{geometry}
+%\usepackage{setspace}
+\usepackage{pgfplots}
+\usepackage{tikz}
+\usetikzlibrary{colorbrewer}
+
+
+%gets rid of bottom navigation bars
+\setbeamertemplate{footline}[frame number]{}
+
+%gets rid of bottom navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+%gets rid of footer
+%will override 'frame number' instruction above
+%comment out to revert to previous/default definitions
+\setbeamertemplate{footline}{}
+
+
+\input{../template-colors}
+\input{../template-dimensions}
+
+\input{tikz-drawings}
+
+\begin{document}
+
+\beamertitlepagetikzbackground
+
+\newpage
+
+\beamersectionpagetikzbackground
+
+\end{document}

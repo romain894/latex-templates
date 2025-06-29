@@ -3,8 +3,6 @@
 
 \newcommand{\templatetype}{report}
 
-\newcommand{\assetspath}{assets}
-
 \input{assets/template-base}
 
 \setlength{\chapterpicturetitlespacing}{-\Gm@tmargin}

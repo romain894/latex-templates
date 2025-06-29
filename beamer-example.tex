@@ -1,0 +1,98 @@
+\documentclass[aspectratio=169]{my-beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage[style=authortitle-comp]{biblatex} % footer citations
+% style=authortitle-tcomp
+% add option backend=biber?
+
+\usepackage{lipsum} 
+
+\title{Example using this {\LaTeX} beamer template}
+\subtitle{Enjoy!}
+\author{
+Romain Thomas \\
+\textit{Institution}
+\and
+et al. \\
+\textit{Somewhere }
+}
+\date{\today}
+%\titlebackgroundpicture{default_image.png}
+%\abstracttitle{Abstract}
+%\abstract{\lipsum[1]}
+
+\addbibresource{assets/references.bib}
+%bibtex %.aux
+% use biber: biber %.bcd
+
+
+\begin{document}
+
+\begin{frame}[plain]
+\maketitle
+\end{frame}
+
+\begin{frame}{Table of contents}
+\tableofcontents
+\end{frame}
+
+\section{Introduction}
+
+\begin{frame}
+\frametitle{There Is No Largest Prime Number} 
+\framesubtitle{The proof uses \textit{reductio ad absurdum}.} 
+\lipsum[1]
+
+\end{frame}
+
+
+\section{Deuxième section}
+
+\begin{frame}{Première section}
+\begin{itemize}
+\item blabla
+\item hello \begin{itemize}
+  \item hello
+\end{itemize}
+\item toto
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\begin{description}
+  \item[hello] world
+  \item[coucou] tout le monde
+\end{description}
+
+\bigskip
+Test footnote\footnote[frame]{Coucou}.
+
+\medskip
+Test bibliographic reference\footcite{github_openalex_analysis}
+
+\end{frame}
+
+
+\section{Une section}
+
+\begin{frame}
+\lipsum[1]
+
+\end{frame}
+
+\section{Quatrième section qui a l'air très intéressant ! On va apprendre pleiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiin de choses}
+
+
+\subsection{Loooonnnnnngggggggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg title}
+
+\begin{frame}{Loooonnnnnngggggggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg looooooonnnnnngggggg title}
+\lipsum[1]
+\end{frame}
+
+\begin{frame}{Bibliography}
+\printbibliography
+\end{frame}
+
+ 
+\end{document}
