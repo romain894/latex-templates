@@ -1,6 +1,11 @@
 \renewcommand{\normalsize}{\fontsize{9}{10}\selectfont}
 
+\RequirePackage{etoolbox}
+
+\RequirePackage{xcolor}
+
 \input{assets/template-colors}
+\input{assets/template-colors-options}
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{\templatetype}}
 \ProcessOptions\relax
