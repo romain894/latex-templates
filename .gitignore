@@ -3,6 +3,14 @@
 *.table
 *.dat
 *.aux
+*.nav
+*.bbl
+*.bcf
+*.blg
+*.out
+*.xml
+*.snm
+*.toc
 assets/logo.svg
 assets/logo-eps-converted-to.pdf
 tikz-figures/
